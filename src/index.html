@@ -1,21 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <title>qwertz</title>
-      <!-- build:css -->
+    <title>qwertz</title>
+    <!-- build:css -->
 
-      <link href="../node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
-
-      <link href="css/styles.css" rel="stylesheet">
+    <link href="../node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:200,200i,400,400i,700,700i" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
     <!-- endbuild -->
     <!-- build:js -->
-      <script src="app/require.config.js"></script>
-      <script data-main="app/startup" src="../node_modules/requirejs/require.js"></script>
+    <script src="app/require.config.js"></script>
+    <script data-main="app/startup" src="../node_modules/requirejs/require.js"></script>
     <!-- endbuild -->
-  </head>
-  <body>
+</head>
+
+<body>
+    <div class='navbar'>
+        <img class='logo' src='images/logo.png' />
+        <div class='menu'>
+            <ul class="menuList">
+                <li>Home</li>
+                <li>Shop</li>
+                <li>About</li>
+                <li>Team</li>
+            </ul>
+        </div>
+    </div>
     <app params="route: route"></app>
-  </body>
+</body>
+
 </html>

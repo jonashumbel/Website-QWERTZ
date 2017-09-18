@@ -1,3 +1,54 @@
 #page {
-	margin-top: 80px;
+    margin-top: 80px;
+}
+
+* {
+    font-family: 'Raleway', sans-serif;
+    box-sizing: border-box;
+}
+
+
+/***** NAVBAR ******/
+
+.navbar {
+    height: 60px;
+    width: 100%;
+    background-color: #e8e8e8;
+    position: relative;
+    padding: 0 10px 0 10px;
+}
+
+.logo {
+    position: relative;
+    height: 60px;
+    display: inline-block;
+}
+
+.menu {
+    position: absolute;
+    display: inline-block;
+    top: 50%;
+    transform: translatey(-40%);
+    right: 20px;
+}
+
+.menuList {
+    display: inline-block;
+    position: relative;
+    float: right;
+}
+
+.menuList>li {
+    position: relative;
+    list-style-type: none;
+    display: inline-block;
+    margin-left: 20px;
+    font-size: 1.2em;
+    color:black;
+    transition: all .3s;
+    cursor:pointer;
+}
+
+.menuList>li:hover {
+  color:#737373;
 }
