@@ -45,10 +45,15 @@
     margin-left: 20px;
     font-size: 1.2em;
     color:black;
-    transition: all .3s;
     cursor:pointer;
 }
 
-.menuList>li:hover {
+.menuList>li>a:hover {
   color:#737373;
+}
+
+.menuList>li>a {
+  text-decoration:none;
+  color:black;
+  transition: all .3s;
 }
