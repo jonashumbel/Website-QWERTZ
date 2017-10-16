@@ -20,6 +20,7 @@ body {
     padding-bottom: 30px;
     max-width: 1000px;
     padding-top: 30px;
+    flex-direction: column;
 }
 
 
@@ -32,7 +33,7 @@ body {
     position: fixed;
     padding: 0 10px 0 10px;
     top: 0px;
-    z-index:100;
+    z-index: 100;
 }
 
 .logo {
@@ -100,32 +101,53 @@ body {
     font-weight: bold;
 }
 
+
 /***** CONTACT *****/
+
 .contactPic {
-  background-image: url("../images/contact-pic.jpg")
+    background-image: url("../images/contact-pic.jpg")
+}
+
+.formContainer {
+    position: relative;
+    width: 70%;
+}
+
+.fieldContainer {
+    display: flex;
+    flex-direction: row;
 }
 
 .inputField {
-  height:40px;
-  display:flex;
-  flex-basis: 50%;
-  flex-grow: 1;
-  border-radius:7px;
-  border:1px solid #eeeeee;
-  font-size:1em;
-  transition: all .2s;
-  padding-left:10px;
-  margin-bottom:10px;
+    height: 40px;
+    display: flex;
+    flex-grow: 1;
+    border-radius: 7px;
+    border: 1px solid #eeeeee;
+    font-size: 1em;
+    transition: all .2s;
+    padding-left: 10px;
+    margin: 0 10px 10px 0;
+    flex-basis: 50%;
+    background-color: white;
+}
+
+.inputField::-webkit-input-placeholder {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.inputField:last-child {
+    margin: 0 0 10px 0;
 }
 
 .inputField:focus {
-  border-color:black;
-  outline:none;
-  border-color:#888888;
+    border-color: black;
+    outline: none;
+    border-color: #888888;
 }
 
 .textareaStyle {
-  height:100px;
-  width:100%;
-  padding-top:10px;
+    height: 100px;
+    width: 100%;
+    padding-top: 10px;
 }

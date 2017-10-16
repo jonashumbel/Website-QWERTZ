@@ -1,11 +1,25 @@
 <div class="parallax contactPic"></div>
 <h2 class="tagline">Get in Touch</h2>
 <div class=pageContainer>
-<p>Please write us about anything. If you wanna complain about anything or have a great design idea. Just write it down, and we'll try to answer you withing 24 hours!</p>
-<form>
-<input type="text" required="required" placeholder="Surname" class="inputField" name="surname"/>
-<input type="text" required="required" placeholder="Name" class="inputField" name="name"/>
-<input type="email" required="required" placeholder="Email" class="inputField" name="surname"/>
-<textarea class="inputField textareaStyle" placeholder="What's happening?"></textarea>
-</form>
+    <p>Please write us about anything. If you wanna complain about anything or have a great design idea. Just write it down, and we'll try to answer you withing 24 hours!</p>
+    <div class='formContainer'>
+        <form>
+            <div class='fieldContainer'>
+                <select class="inputField" placeholder="Anrede" required="required">
+                  <option value="" disabled selected>Anrede</option>
+                  <option value="Frau">Frau</option>
+                  <option value="Mann">Mann</option>
+                </select>
+            </div>
+            <div class='fieldContainer'>
+                <input type="text" required="required" placeholder="Surname" class="inputField" name="surname" />
+                <input type="text" required="required" placeholder="Name" class="inputField" name="name" />
+            </div>
+            <div class='fieldContainer'>
+                <input type="email" required="required" placeholder="Email" class="inputField" name="email" />
+                <input type="tel" placeholder="Mobile" class="inputField" name="mobile" />
+            </div>
+            <textarea class="inputField textareaStyle" placeholder="What's happening?"></textarea>
+        </form>
+    </div>
 </div>
