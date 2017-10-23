@@ -176,7 +176,7 @@ body {
 }
 
 .productPictureContainer {
-  flex-grow: 2;
+  flex-grow: 1;
   position: relative;
 }
 
@@ -201,13 +201,24 @@ flex-basis: 25%;
 }
 
 .colorPicker {
-  display: flex;
+  display: inline-block;
   flex-flow: column;
 }
 
 .colorChoice {
   width:60px;
   height:20px;
-  background-color: red;
   border-radius: 3px;
+}
+
+.red {
+  background-color:#C1666B;
+}
+
+.blue {
+  background-color: #31334F;
+}
+
+.black {
+  background-color: #2E2E2E;
 }
