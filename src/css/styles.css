@@ -1,5 +1,16 @@
 /***** GENERAL *****/
 
+/*
+
+// Colors
+Blue: #31334F
+Red: #C1666B
+Beige: #EDDDB1
+White: #FBFBFF
+Black: #2E2E2E
+
+*/
+
 body {
     margin: 0px;
 }
@@ -160,6 +171,20 @@ body {
 }
 
 .sechsegg {
-  height:100px;
-  fill: tomato;
+  height:300px;
+  fill: #EDDDB1;
+  opacity: 0.5;
+}
+
+.productContainer {
+  display:flex;
+  margin-top: 30px;
+}
+
+.productPictureContainer {
+  flex-grow: 2;
+}
+
+.productInfo {
+flex-grow: 1;
 }
