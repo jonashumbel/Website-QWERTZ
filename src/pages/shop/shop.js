@@ -1,7 +1,12 @@
 define(['knockout', 'text!./shop.html'], function(ko, templateMarkup) {
 
   function Shop(params) {
-    this.message = ko.observable('Hello from the shop page!');
+    $(document).ready(function(){
+      $('.colorChoice').click(function(){
+        $('.colorChoice').removeClass('active');
+        $(this).toggleClass('active');
+      })
+    })
   }
 
   // This runs when the component is torn down. Put here any logic necessary to clean up,
