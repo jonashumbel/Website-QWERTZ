@@ -17,9 +17,10 @@ var requireJsRuntimeConfig = vm.runInNewContext(fs.readFileSync('src/app/require
         include: [
             'requireLib',
             'components/app/app',
-            'components/nav-bar/nav-bar',
-            'pages/home/home',
-            'pages/about/about'
+            'pages/kontakt/kontakt',
+            'pages/team/team',
+            'pages/shop/shop',
+            'pages/home/home'
         ],
         insertRequire: ['app/startup'],
         bundles: {
@@ -42,7 +43,6 @@ gulp.task('js', function () {
 gulp.task('css', function () {
     //Array of all CSS files needed
     var appCss = gulp.src([
-        './node_modules/bootstrap/dist/css/bootstrap.min.css',
         './src/css/*.css'
     ])
     .pipe(replace(/url\((')?\.\.\/fonts\//g, 'url($1fonts/'));
@@ -89,4 +89,3 @@ gulp.task('webserver', function () {
             open : 'http://localhost:8050/src/index.html'
         }));
 });
-
