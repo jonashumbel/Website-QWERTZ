@@ -2,42 +2,68 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Make life easier with the most simple bikes you've ever seen. Bla Bla Bla">
-    <meta name="keywords" content="bike, bicycle, simple, minimalistc, easy riding">
-    <meta name="author" content="Jonas Humbel">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>qwertz</title>
-    <!-- build:css -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Make life easier with the most simple bikes you've ever seen. Bla Bla Bla">
+  <meta name="keywords" content="bike, bicycle, simple, minimalistc, easy riding">
+  <meta name="author" content="Jonas Humbel">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>qwertz</title>
+  <!-- build:css -->
 
-    <!-- <link href="../node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet"> -->
-    <link href="https://fonts.googleapis.com/css?family=Raleway:200,200i,400,400i,700,700i" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
-    <!-- endbuild -->
-    <!-- build:js -->
-    <script src="app/require.config.js"></script>
-    <script data-main="app/startup" src="../node_modules/requirejs/require.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- endbuild -->
+  <!-- <link href="../node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway:200,200i,400,400i,700,700i" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+  <!-- endbuild -->
+  <!-- build:js -->
+  <script src="app/require.config.js"></script>
+  <script data-main="app/startup" src="../node_modules/requirejs/require.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- endbuild -->
+
 </head>
 
 <body>
-    <div class='navbar'>
-        <!-- <img class='logo' src='images/logo.png' /> -->
-        <h1 style='bottom: 10px; position: relative;'>QWERTZ</h1>
-        <div class='menu'>
+  <!-- <div class='navbar'>
             <ul class="menuList">
                 <li><a href="#">Home</a></li>
                 <li><a href="#shop">Shop</a></li>
-                <li><a href="#kontakt">Kontakt</a></li>
-                <!-- <li><a href="#team">Team</a></li> -->
             </ul>
-        </div>
+            <img class='logo' src='images/logo.png' />
+            <ul class="menuList">
+                <li><a href="#kontakt">Kontakt</a></li>
+                <li><a href="#team">Team</a></li>
+            </ul>
+    </div> -->
+  <div class='navbar'>
+    <!-- <img class='logo' src='images/logo.png' /> -->
+    <h1 style='bottom: -8px; position: absolute;left:20px;'>QWERTZ</h1>
+    <div class='menu'>
+      <ul class="menuList">
+        <li><a href="#">Home</a></li>
+        <li><a href="#shop">Shop</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+        <!-- <li><a href="#team">Team</a></li> -->
+      </ul>
     </div>
-    <div class="container">
-        <app params="route: route"></app>
+  </div>
+  <div class="container">
+    <app params="route: route"></app>
+  </div>
+
+  <footer>
+    <div id="map"></div>
+    <script>
+
+    </script>
+    <div class='footerInfo'>
+      <div id='topBtn'><h5>Top</h5></div>
     </div>
+  </footer>
+
+
+
+<!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD279vArGC8GY7ag1lsuXki9qpwWXAKvh4&callback=initMap"></script> -->
 </body>
 
 </html>

@@ -12,157 +12,165 @@ Black: #2E2E2E
 */
 
 body {
-    margin: 0px;
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
 }
 
 * {
-    font-family: 'Raleway', sans-serif;
-    box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+  box-sizing: border-box;
 }
 
 .container {
-    padding-top: 30px;
+  padding-top: 30px;
 }
 
 .pageContainer {
-    width: 95%;
-    display: flex;
-    margin: 0 auto;
-    padding-bottom: 30px;
-    max-width: 1000px;
-    padding-top: 30px;
-    flex-direction: column;
+  width: 95%;
+  display: flex;
+  margin: 0 auto;
+  padding-bottom: 30px;
+  max-width: 1000px;
+  padding-top: 30px;
+  flex-direction: column;
 }
 
+.pictureContainer {
+  position: relative;
+}
 
 /***** NAVBAR ******/
 
 .navbar {
-    height: 60px;
-    width: 100%;
-    background-color: white;
-    position: fixed;
-    padding: 0 10px 0 10px;
-    top: 0px;
-    z-index: 100;
+  height: 60px;
+  width: 100%;
+  background-color: white;
+  position: fixed;
+  padding: 0 10px 0 10px;
+  top: 0px;
+  z-index: 100;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .logo {
-    position: relative;
-    height: 60px;
-    display: inline-block;
+  position: relative;
+  height: 100px;
+  display: inline-block;
+  align-self: center;
 }
 
 .menu {
-    position: absolute;
-    display: inline-block;
-    top: 50%;
-    transform: translatey(-50%);
-    right: 20px;
+  position: absolute;
+  right: 0;
 }
 
 .menuList {
-    display: inline-block;
-    position: relative;
-    float: right;
+  align-self: baseline;
+  display: flex;
+  padding: 0px;
 }
 
 .menuList>li {
-    position: relative;
-    list-style-type: none;
-    display: inline-block;
-    margin-left: 20px;
-    font-size: 1.2em;
-    color: black;
-    cursor: pointer;
+  position: relative;
+  list-style-type: none;
+  display: inline-block;
+  font-size: 1.2em;
+  color: black;
+  cursor: pointer;
+  padding: 0 10px 0 10px;
 }
 
 .menuList>li>a:hover {
-    color: #737373;
+  color: #737373;
 }
 
 .menuList>li>a {
-    text-decoration: none;
-    color: black;
-    transition: all .3s;
+  text-decoration: none;
+  color: black;
+  transition: all .3s;
 }
-
 
 /***** HOME *****/
 
 .homePicture {
-    background-image: url("../images/home-picture1.jpg");
+  background-image: url("../images/home-picture1.jpg");
 }
 
 .parallax {
-    height: 500px;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .tagline {
-    background-color: white;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate3d(-50%, -100%, 0);
-    padding: 10px 15px;
-    font-weight: bold;
+  background-color: white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate3d(-50%, -100%, 0);
+  padding: 10px 15px;
+  font-weight: bold;
 }
-
 
 /***** CONTACT *****/
 
 .contactPic {
-    background-image: url("../images/contact-pic1.jpg")
+  background-image: url("../images/contact-pic1.jpg")
 }
 
 .formContainer {
-    position: relative;
-    width: 70%;
+  position: relative;
+  width: 70%;
 }
 
 .fieldContainer {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .inputField {
-    height: 40px;
-    display: flex;
-    flex-grow: 1;
-    border-radius: 7px;
-    border: 1px solid #eeeeee;
-    font-size: 1em;
-    transition: all .2s;
-    padding-left: 10px;
-    margin: 0 10px 10px 0;
-    flex-basis: 50%;
-    background-color: white;
+  height: 40px;
+  display: flex;
+  flex-grow: 1;
+  border-radius: 7px;
+  border: 1px solid #eeeeee;
+  font-size: 1em;
+  transition: all .2s;
+  padding-left: 10px;
+  margin: 0 10px 10px 0;
+  flex-basis: 50%;
+  background-color: white;
 }
 
 .inputField::-webkit-input-placeholder {
-    color: rgba(0, 0, 0, 0.4);
+  color: rgba(0, 0, 0, 0.4);
 }
 
 .inputField:last-child {
-    margin: 0 0 10px 0;
+  margin: 0 0 10px 0;
 }
 
 .inputField:focus {
-    border-color: black;
-    outline: none;
-    border-color: #888888;
+  border-color: black;
+  outline: none;
+  border-color: #888888;
 }
 
 .textareaStyle {
-    height: 100px;
-    width: 100%;
-    padding-top: 10px;
+  height: 100px;
+  width: 100%;
+  padding-top: 10px;
 }
 
+#map {
+  height: 400px;
+  width: 400px;
+}
 
 /***** SHOP *****/
 
@@ -171,7 +179,7 @@ body {
 }
 
 .productContainer {
-  display:flex;
+  display: flex;
   margin-top: 30px;
 }
 
@@ -181,43 +189,43 @@ body {
 }
 
 .sechsegg {
-  width:60%;
+  width: 60%;
   fill: #EDDDB1;
   opacity: 0.5;
   position: absolute;
   display: inline;
   z-index: -1;
-  left:-10px;
+  left: -10px;
   top: 30px;
 }
 
 .productPicture {
-  height:400px;
+  height: 400px;
 }
 
 .productInfo {
-flex-grow: 1;
-flex-basis: 25%;
+  flex-grow: 1;
+  flex-basis: 25%;
 }
 
 .colorPicker {
   display: flex;
   flex-flow: row;
-  height:30px;
+  height: 30px;
 }
 
 .colorChoice {
-  width:50px;
-  height:20px;
+  width: 50px;
+  height: 20px;
   border-radius: 3px;
   margin: 5px;
   transition: .5s all;
   order: 2;
-  cursor:pointer;
+  cursor: pointer;
 }
 
 .red {
-  background-color:#C1666B;
+  background-color: #C1666B;
 }
 
 .blue {
@@ -229,7 +237,40 @@ flex-basis: 25%;
 }
 
 .active {
-  width:70px;
+  width: 70px;
   height: 30px;
-  order:2;
+  order: 2;
+}
+
+/***** FOOTER *****/
+footer {
+  height:400px;
+  width: 100%;
+  background-color: #2E2E2E;
+  display: flex;
+}
+
+#map {
+  height: 50%;
+  width: 50%;
+  position: relative;
+  align-self: center;
+}
+
+#topBtn {
+  border-radius: 100%;
+  background-color: white;
+  border: 2px solid #2E2E2E;
+  height: 50px;
+  width: 50px;
+  justify-content: center;
+  position: relative;
+  top:-25px;
+  display: flex;
+  cursor:pointer;
+}
+
+#topBtn > h5 {
+  position: relative;
+  align-self: center;
 }
