@@ -2,8 +2,12 @@ define(['knockout', 'text!./shop.html'], function(ko, templateMarkup) {
 
   function Shop(params) {
     $(document).ready(function(){
-      $('.colorChoice').click(function(){
-        $('.colorChoice').removeClass('active');
+      $('.colorClick1').click(function(){
+        $('.colorClick1').removeClass('active');
+        $(this).toggleClass('active');
+      });
+      $('.colorClick2').click(function(){
+        $('.colorClick2').removeClass('active');
         $(this).toggleClass('active');
       })
     })

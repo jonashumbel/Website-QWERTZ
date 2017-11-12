@@ -7,8 +7,7 @@ var require = {
         "hasher":               "../node_modules/hasher/dist/js/hasher.min",
         "knockout":             "../node_modules/knockout/build/output/knockout-latest",
         "signals":              "../node_modules/signals/dist/signals.min",
-        "text":                 "../node_modules/requirejs-text/text",
-        "googlemaps":           "vendor/googlemaps"
+        "text":                 "../node_modules/requirejs-text/text"
     }
 
 };

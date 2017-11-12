@@ -1,4 +1,4 @@
-define(['knockout', 'text!./app.html', 'googlemaps'], function(ko, template, google) {
+define(['knockout', 'text!./app.html'], function(ko, template) {
 
   function App(params) {
     // This viewmodel doesn't do anything except pass through the 'route' parameter to the view.
@@ -14,21 +14,6 @@ define(['knockout', 'text!./app.html', 'googlemaps'], function(ko, template, goo
       });
 
     });
-
-    function initMap() {
-      var shop = {
-        lat: 46.958421,
-        lng: 7.443559
-      };
-      var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 14,
-        center: shop
-      });
-      var marker = new google.maps.Marker({
-        position: shop,
-        map: map
-      });
-    }
   }
 
   return {
