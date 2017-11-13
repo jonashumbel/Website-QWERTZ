@@ -1,4 +1,4 @@
-define(['knockout', 'text!./shop.html'], function(ko, templateMarkup) {
+define(['knockout', 'text!./shop.html', 'jquery'], function(ko, templateMarkup, $) {
 
   function Shop(params) {
     $(document).ready(function(){

@@ -1,4 +1,4 @@
-define(['knockout', 'text!./app.html'], function(ko, template) {
+define(['knockout', 'text!./app.html', 'jquery'], function(ko, template, $) {
 
   function App(params) {
     // This viewmodel doesn't do anything except pass through the 'route' parameter to the view.

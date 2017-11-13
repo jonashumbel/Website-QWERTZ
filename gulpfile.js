@@ -48,7 +48,7 @@ gulp.task('css', function () {
     .pipe(replace(/url\((')?\.\.\/fonts\//g, 'url($1fonts/'));
     var combinedCss = es.concat(appCss).pipe(concat('css.css'));
     return es.concat(combinedCss)
-        .pipe(gulp.dest('./dist/'));
+        .pipe(gulp.dest('./dist/css/'));
 });
 
 
@@ -62,10 +62,24 @@ gulp.task('fonts', function(){
 gulp.task('html', function() {
     return gulp.src('./src/index.html')
         .pipe(htmlreplace({
-            'css': 'css.css?' + Date.now(),
+            'css': 'css/css.css?' + Date.now(),
             'js': 'scripts.js?' + Date.now()
         }))
         .pipe(gulp.dest('./dist/'));
+});
+
+gulp.task('img', function() {
+    return gulp.src([
+            'src/images/*'
+        ])
+        .pipe(gulp.dest('./dist/images/'));
+});
+
+gulp.task('video', function() {
+    return gulp.src([
+            'src/videos/*'
+        ])
+        .pipe(gulp.dest('./dist/videos/'));
 });
 
 // Removes all files from ./dist/
@@ -74,7 +88,7 @@ gulp.task('clean', function() {
         .pipe(clean());
 });
 
-gulp.task('default', ['html', 'js', 'css',  'fonts'], function(callback) {
+gulp.task('default', ['html', 'js', 'css',  'img', 'video', 'fonts'], function(callback) {
     callback();
     console.log('\nPlaced optimized files in ' + chalk.magenta('dist/\n'));
 });

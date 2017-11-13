@@ -19,6 +19,7 @@
     "bootstrap": "^3.3.7",
     "crossroads": "^0.12.2",
     "hasher": "^1.2.0",
+    "jquery": "^3.2.1",
     "knockout": "^3.4.1",
     "requirejs": "^2.3.2",
     "requirejs-text": "^2.0.12"
