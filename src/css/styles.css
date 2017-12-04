@@ -7,7 +7,7 @@ Blue: #31334F
 Red: #C1666B
 Beige: #EDDDB1
 White: #FBFBFF
-Black: #2E2E2E
+Deep Blue: #1A1D2A
 
 */
 
@@ -20,6 +20,7 @@ body {
 * {
   font-family: 'Raleway', sans-serif;
   box-sizing: border-box;
+  color: #1A1D2A;
 }
 
 .container {
@@ -227,6 +228,11 @@ h1 {
   transform: scale(-1, 1);
 }
 
+.productTitle {
+  margin: 0px;
+  font-size:5em;
+}
+
 .sechsegg {
   width: 60%;
   fill: #EDDDB1;
@@ -294,7 +300,7 @@ footer {
   justify-content: space-between;
   color: white;
   position: relative;
-  background-image: url('../Images/footerBackground2.png');
+  background-image: url('../Images/footerBackground4.png');
 }
 
 #map {
@@ -348,6 +354,7 @@ footer {
 
 .details p {
   margin: 1px;
+  color:#EDDDB1;
 }
 
 .links>ul {
