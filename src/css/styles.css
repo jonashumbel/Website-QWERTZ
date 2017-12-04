@@ -294,6 +294,7 @@ footer {
   justify-content: space-between;
   color: white;
   position: relative;
+  background-image: url('../Images/footerBackground2.png');
 }
 
 #map {
