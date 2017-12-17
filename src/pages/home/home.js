@@ -1,12 +1,14 @@
-define(["knockout", "text!./home.html"], function(ko, homeTemplate) {
+define(["knockout", "text!./home.html", "jquery"], function(ko, homeTemplate, $) {
 
   function HomeViewModel(route) {
-    this.message = ko.observable('Welcome to Website-QWERTZ!');
+    $(document).ready(function(){
+      $('.colorClick3').click(function(){
+        $('.colorClick3').removeClass('active');
+        $(this).toggleClass('active');
+      });
+    })
   }
 
-  HomeViewModel.prototype.doSomething = function() {
-    this.message('You invoked doSomething() on the viewmodel.');
-  };
 
   return { viewModel: HomeViewModel, template: homeTemplate };
 

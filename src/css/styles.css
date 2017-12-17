@@ -64,7 +64,6 @@ h1 {
   z-index: 100;
   display: flex;
   flex-direction: row;
-  justify-content: center;
 }
 
 .logo {
@@ -209,6 +208,7 @@ h1 {
   background-color: rgba(232, 222, 197, 0.2);
   padding: 50px;
   padding-right: 104px;
+  overflow:hidden;
 }
 
 .productPictureContainer {
@@ -222,7 +222,7 @@ h1 {
 }
 
 .productPictureContainer:nth-child(2n)>.sechsegg {
-  left: 300px;
+  left: 490px;
 }
 
 .productPictureContainer:nth-child(2n)>.productPicture {
@@ -235,14 +235,14 @@ h1 {
 }
 
 .sechsegg {
-  width: 60%;
-  fill: #EDDDB1;
-  opacity: 0.5;
-  position: absolute;
-  display: inline;
-  z-index: -1;
-  left: -10px;
-  top: 30px;
+  width: 90%;
+    fill: rgba(26, 29, 42, 0.60);
+    opacity: 0.5;
+    position: absolute;
+    display: inline;
+    z-index: -1;
+    left: -400px;
+    top: -77px;
 }
 
 .productPicture {
@@ -281,8 +281,8 @@ h1 {
   background-color: #31334F;
 }
 
-.black {
-  background-color: #2E2E2E;
+.beige {
+  background-color: #EDDDB1;
 }
 
 .active {
@@ -302,6 +302,7 @@ footer {
   color: white;
   position: relative;
   background-image: url('../Images/footerBackground4.png');
+  background-position-y: 650px;
 }
 
 #map {
@@ -334,6 +335,7 @@ footer {
 
 .footerInfo {
   display: flex;
+  margin-right: 30px;
 }
 
 .details {
@@ -367,6 +369,7 @@ footer {
   margin: 5px;
   transition: .3s all;
   cursor: pointer;
+  color:#EDDDB1;
 }
 
 .links>ul>li:hover {
