@@ -23,6 +23,14 @@ body {
   color: #1A1D2A;
 }
 
+b {
+  color:#EDDDB1;
+}
+
+.divider {
+  width:20px;
+}
+
 .container {
   padding-top: 30px;
 }
@@ -236,7 +244,7 @@ h1 {
 
 .sechsegg {
   width: 90%;
-    fill: rgba(26, 29, 42, 0.60);
+    fill: #EDDDB1;
     opacity: 0.5;
     position: absolute;
     display: inline;
