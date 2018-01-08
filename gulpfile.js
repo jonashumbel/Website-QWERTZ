@@ -20,7 +20,8 @@ var requireJsRuntimeConfig = vm.runInNewContext(fs.readFileSync('src/app/require
             'pages/kontakt/kontakt',
             'pages/team/team',
             'pages/shop/shop',
-            'pages/home/home'
+            'pages/home/home',
+            'pages/event/event'
         ],
         insertRequire: ['app/startup'],
         bundles: {

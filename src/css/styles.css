@@ -24,11 +24,16 @@ body {
 }
 
 b {
-  color:#EDDDB1;
+  color: #EDDDB1;
+}
+
+h5 {
+  font-size: 1.5em;
+  margin: 0 0 20px 0;
 }
 
 .divider {
-  width:20px;
+  width: 20px;
 }
 
 .container {
@@ -96,11 +101,12 @@ h1 {
 .menuList>li {
   position: relative;
   list-style-type: none;
-  display: inline-block;
   font-size: 1.2em;
   color: black;
   cursor: pointer;
   padding: 0 10px 0 10px;
+  height: 60px;
+  display: flex;
 }
 
 .menuList>li>a:hover {
@@ -111,6 +117,7 @@ h1 {
   text-decoration: none;
   color: black;
   transition: all .3s;
+  align-self: center;
 }
 
 /***** HOME *****/
@@ -160,6 +167,8 @@ h1 {
 .fieldContainer {
   display: flex;
   flex-direction: row;
+  margin-bottom: 10px;
+  align-items: center;
 }
 
 .inputField {
@@ -171,7 +180,7 @@ h1 {
   font-size: 1em;
   transition: all .2s;
   padding-left: 10px;
-  margin: 0 10px 10px 0;
+  margin: 0 10px 0px 0;
   flex-basis: 50%;
   background-color: white;
 }
@@ -181,7 +190,7 @@ h1 {
 }
 
 .inputField:last-child {
-  margin: 0 0 10px 0;
+  margin: 0;
 }
 
 .inputField:focus {
@@ -216,7 +225,7 @@ h1 {
   background-color: rgba(232, 222, 197, 0.2);
   padding: 50px;
   padding-right: 104px;
-  overflow:hidden;
+  overflow: hidden;
 }
 
 .productPictureContainer {
@@ -239,18 +248,18 @@ h1 {
 
 .productTitle {
   margin: 0px;
-  font-size:5em;
+  font-size: 5em;
 }
 
 .sechsegg {
   width: 90%;
-    fill: #EDDDB1;
-    opacity: 0.5;
-    position: absolute;
-    display: inline;
-    z-index: -1;
-    left: -400px;
-    top: -77px;
+  fill: #EDDDB1;
+  opacity: 0.5;
+  position: absolute;
+  display: inline;
+  z-index: -1;
+  left: -400px;
+  top: -77px;
 }
 
 .productPicture {
@@ -299,6 +308,68 @@ h1 {
   order: 2;
 }
 
+/***** EVENT *****/
+
+.eventPic {
+  background-image: url('../Images/eventPic.jpg');
+}
+
+#launchLink {
+  background-color: #EDDDB1;
+}
+
+#launchLink>a {
+  color: #C1666B;
+}
+
+.eventDetails {
+  margin-left: 20px;
+}
+
+.eventDetails>p {
+  margin-top: 0px;
+}
+
+h6 {
+  font-weight: bold;
+  font-size: inherit;
+  margin: 0;
+  color: #EDDDB1;
+}
+
+.timetable {
+  margin-left: 20px;
+}
+
+.timetable>p {
+  margin-top: 0px;
+}
+
+.button {
+  cursor: pointer;
+  border-radius: 0px;
+  border: 2px solid #1A1D2A;
+  height: 40px;
+  width: 100px;
+  font-size:1em;
+  transition: all .5s ease;
+}
+
+.button:hover {
+  background-color: #1A1D2A;
+  color:white;
+}
+
+.valueChoice {
+  margin: 0 5px 0 5px;
+}
+
+.number {
+  width:75px;
+  display:inline-block;
+  margin-left:10px !important;
+}
+
 /***** FOOTER *****/
 
 footer {
@@ -339,6 +410,8 @@ footer {
 #topBtn>h5 {
   position: relative;
   align-self: center;
+  font-size: 1em;
+  margin: 0;
 }
 
 .footerInfo {
@@ -365,7 +438,7 @@ footer {
 
 .details p {
   margin: 1px;
-  color:#EDDDB1;
+  color: #EDDDB1;
 }
 
 .links>ul {
@@ -377,7 +450,7 @@ footer {
   margin: 5px;
   transition: .3s all;
   cursor: pointer;
-  color:#EDDDB1;
+  color: #EDDDB1;
 }
 
 .links>ul>li:hover {
@@ -391,6 +464,7 @@ Und der Container hat die Eigenschaft "max-width:1000px" das heisst, der Hauptte
 sieht also auch auf grossen Bildschirmen gut aus. */
 
 /* Media query for Tablets */
+
 @media only screen and (max-width: 770px) {
   /***** GENERAL *****/
   .pageContainer {
@@ -445,6 +519,7 @@ sieht also auch auf grossen Bildschirmen gut aus. */
 }
 
 /* Media query for mobile phones */
+
 @media only screen and (max-width: 380px) {
   /***** NAVBAR *****/
   .navbar>h1 {
@@ -464,7 +539,7 @@ sieht also auch auf grossen Bildschirmen gut aus. */
   .paragraph {
     margin-bottom: 0px;
   }
-  .pageContainer > h1 {
+  .pageContainer>h1 {
     font-size: 1.5em;
     margin-top: 5px;
   }
@@ -476,7 +551,6 @@ sieht also auch auf grossen Bildschirmen gut aus. */
   .productContainer {
     padding: 5px;
   }
-
   /***** FOOTER *****/
   footer {
     height: 500px;
@@ -493,21 +567,20 @@ sieht also auch auf grossen Bildschirmen gut aus. */
     margin-left: 0px;
     margin-top: 10px;
   }
-  .links > ul {
+  .links>ul {
     display: flex;
     justify-content: space-between;
-    padding:0px;
+    padding: 0px;
   }
-  .links > ul > li {
+  .links>ul>li {
     align-self: center;
   }
-
   /***** KONTAKT *****/
   .fieldContainer {
     flex-direction: column;
   }
   .inputField:last-child {
-    margin:0 10px 10px 0;
+    margin: 0 10px 10px 0;
   }
   .formContainer {
     width: 100%;

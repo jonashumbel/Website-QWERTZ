@@ -1,0 +1,114 @@
+<div class='pictureContainer'>
+  <div class="parallax eventPic"></div>
+  <h2 class="tagline">Das Leben kann auch einfach sein.</h2>
+</div>
+<div class='pageContainer'>
+  <h1>Launch Party</h1>
+  <hr>
+  <p>Good News! QWERTZ startet durch. Und das wollen wir mit euch zusammen feiern:</p>
+  <p>Nach über einem Jahr der Planung, Konzeption, Ideensuche und vielen, vielen Kaffes sind wir so weit: Wir beginnen mit dem Verkauf unserer Bikes! Die viele investitierte Zeit und die langen Nächte haben sich gelohnt. Wir konnten drei Bikes, momentan
+    noch in limitierter Ausgabe, produzieren und die stehen bereit zum Verkauf. Wir sind bereit. Bist du es auch?</p>
+  <h5>Details</h5>
+  <div class='eventDetails'>
+    <h6>Wann?</h6>
+    <p>12. Mai 2018 // Ab 15:00</p>
+    <h6>Wo?</h6>
+    <p>QWERTZ Villa</p>
+    <h6>Wer?</h6>
+    <p>Du! Egal wer du bist, du bist eingeladen. Melde dich einfach unten mit dem Anmeldeformular an</p>
+    <h6>Kosten?</h6>
+    <p>Nope. Du bist gratis dabei. Wenn du willst kannst du uns aber gerne vor Ort noch finanziell unterstützen.</p>
+  </div>
+  <h5>Programm</h5>
+  <div class='timetable'>
+    <h6>15:00</h6>
+    <p>Start des Events: Eintrudeln und erstmal was essen. Es gibt Apero und dabei kannst du an einem PINGPONG Turnier teilnehmen oder einfach gemütlich neue Leute kennenlernen.</p>
+    <h6>17:00</h6>
+    <p>Wir stellen uns vor. Wer ist QWERTZ? Zudem zeigen wir unsere neues Bikes!</p>
+    <h6>18:00</h6>
+    <p><i>THE SOULS</i> sind hier und beehren uns mit ihrer Musik. Gleichzeitig könnt ihr an verschiednen Games teilnehmen.</p>
+    <h6>19:00</h6>
+    <p>Ab jetzt stehen <i>LO & LEDUC</i> auf der Bühne. Die Games finden weiterhin statt.</p>
+    <h6>22:00</h6>
+    <p>Die Sieger der verschiedenen GAMES werden bekannt gegeben und mit einem QWERTZ Velo geehrt!</p>
+    <h6>23:00</h6>
+    <p>Die AFTERPARTY kann beginnen!</p>
+    <h6>10:00</h6>
+    <p>Für alle die es bis hierhin geschafft haben, gibt es einen BRUNCH!</p>
+    <br>
+    <p>Während dem ganzen Event gibt es Getränke und Verpflegung vom Grill. Es ist auch für Vegetarier, Veganer und Co gesorgt.</p>
+  </div>
+  <h5>Anmeldeformular</h5>
+  <div class='formContainer'>
+    <form id='registerForm'>
+      <div class='fieldContainer '>
+        <input type='radio' name='registerChoice' id='radio-1' value='yes' data-bind='checked: registerChoice' />
+        <label for='radio-1'>Ja ich möchte mich/uns anmelden</label>
+      </div>
+      <div class='fieldContainer'>
+        <input type='radio' name='registerChoice' id='radio-2' value='no' data-bind='checked: registerChoice' />
+        <label for='radio-2'>Ich/wir können leider nicht dabei sein</label>
+      </div>
+      <!-- ko if: registerChoice() == 'yes' -->
+      <div class='fieldContainer'>
+        <input type="text" required="required" placeholder="Vorname" class="inputField" name="surname" />
+        <input type="text" required="required" placeholder="Nachname" class="inputField" name="name" />
+        <input type='checkbox' value='vegetarier' id='radio-3' />
+        <label for='radio-3'>Vegetarier</label>
+      </div>
+      <div class='fieldContainer'>
+        <input type="email" required="required" placeholder="Email" class="inputField" name="email" />
+      </div>
+      <div class='fieldContainer'>
+        <input type='checkbox' data-bind='checked: addPerson' id='checkbox-1' />
+        <label for='checkbox-1'>Ja ich bringe noch jemanden mit!</label>
+      </div>
+      <!-- ko if: addPerson() == true -->
+      <div class='fieldContainer'>
+        <input type="text" required="required" placeholder="Vorname Beigleitperson" class="inputField" name="surname" />
+        <input type="text" required="required" placeholder="Nachname Beigleitperson" class="inputField" name="name" />
+        <input type='checkbox' value='vegetarier' id='radio-5' />
+        <label for='radio-5'>Vegetarier</label>
+      </div>
+      <div class='fieldContainer'>
+        <input type="email" required="required" placeholder="Email" class="inputField" name="email" />
+      </div>
+      <!-- /ko -->
+      <div class='fieldContainer'>
+        <p>Ich möchte / wir möchten das Projekt mit folgendem Betrag unterstützen:</p>
+      </div>
+      <div class='fieldContainer'>
+        <div class="valueChoice">
+          <input type='radio' id='radio-5' required="required" name='value' data-bind='checked: ownValue' value='number'>
+          <label for='radio-5'>CHF 200</label>
+        </div>
+        <div class="valueChoice">
+          <input type='radio' id='radio-6' required="required" name='value' data-bind='checked: ownValue' value='number'>
+          <label for='radio-6'>CHF 300</label>
+        </div>
+        <div class="valueChoice">
+          <input type='radio' id='radio-7' required="required" name='value' data-bind='checked: ownValue' value='number'>
+          <label for='radio-7'>CHF 500</label>
+        </div>
+
+        <div class="valueChoice">
+          <input type='radio' id='radio-8' required="required" name='value' value='own' data-bind='checked: ownValue'>
+          <label for='radio-8'>Eigener Betrag</label>
+          <!-- ko if: ownValue() == 'own'-->
+          <input type='number' value='' class='inputField number'>
+          <!-- /ko -->
+        </div>
+      </div>
+      <div class='fieldContainer'>
+        <div class='valueChoice'>
+        <input type='radio' id='radio-9' required="required" name='value' value='nothing' data-bind='checked: ownValue'>
+        <label for='radio-9'>Ich verzichte auf die Unterstützung des Projekts.</label>
+      </div>
+      </div>
+      <input type='submit' class='button' href='#approval' value="Los geht's">
+      <!-- /ko -->
+
+
+    </form>
+  </div>
+</div>
