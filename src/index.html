@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="Make life easier with the most simple bikes you've ever seen. Bla Bla Bla">
+  <meta name="description" content="Make life easier with the most simple bikes you've ever seen.">
   <meta name="keywords" content="bike, bicycle, simple, minimalistc, easy riding">
   <meta name="author" content="Jonas Humbel">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,36 +14,26 @@
 
   <!-- <link href="../node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet"> -->
   <link href="https://fonts.googleapis.com/css?family=Raleway:200,200i,400,400i,700,700i" rel="stylesheet">
+  <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
   <!-- endbuild -->
   <!-- build:js -->
   <script src="app/require.config.js"></script>
   <script data-main="app/startup" src="../node_modules/requirejs/require.js"></script>
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <!-- endbuild -->
 
 </head>
 
 <body>
-  <!-- <div class='navbar'>
-            <ul class="menuList">
-                <li><a href="#">Home</a></li>
-                <li><a href="#shop">Shop</a></li>
-            </ul>
-            <img class='logo' src='images/logo.png' />
-            <ul class="menuList">
-                <li><a href="#kontakt">Kontakt</a></li>
-                <li><a href="#team">Team</a></li>
-            </ul>
-    </div> -->
   <div class='navbar'>
-    <img class='logo' src='images/logo.png' />
+    <div class='logo'></div>
     <div class='menu'>
       <ul class="menuList">
-        <li><a href="#">Home</a></li>
-        <li id='launchLink'><a href="#event">Launch Party</a></li>
-        <li><a href="#shop">Shop</a></li>
-        <li><a href="#kontakt">Kontakt</a></li>
+        <li class='activeMenu menuPoint'><a href="#">Home</a></li>
+        <li class='menuPoint' id='launchLink'><a href="#event">Launch Party</a></li>
+        <li class='menuPoint'><a href="#shop">Shop</a></li>
+        <li class='menuPoint'><a href="#kontakt">Kontakt</a></li>
       </ul>
     </div>
   </div>
@@ -68,6 +58,11 @@
           map: map
         });
       }
+
+      $('.menuPoint').click(function(){
+        $('.menuPoint').removeClass('activeMenu');
+        $(this).addClass('activeMenu');
+      })
     </script>
     <div id='topBtn'>
       <h5>Top</h5>

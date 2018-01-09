@@ -6,6 +6,9 @@ define(["knockout", "text!./home.html", "jquery"], function(ko, homeTemplate, $)
         $('.colorClick3').removeClass('active');
         $(this).toggleClass('active');
       });
+      $('#closePromoter').click(function(){
+        $('.eventPromoter').addClass('noPromoter');
+      });
     })
   }
 
