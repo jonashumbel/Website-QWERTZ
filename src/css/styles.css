@@ -28,7 +28,7 @@ b {
 }
 
 h5 {
-  font-size: 1.5em;
+  font-size: 2em;
   margin: 0 0 20px 0;
 }
 
@@ -334,7 +334,15 @@ h6 {
   font-weight: bold;
   font-size: inherit;
   margin: 0;
-  color: #EDDDB1;
+  display: inline-block;
+}
+
+.programmPoint {
+  font-size:1.5em;
+  color:#EDDDB1;
+  font-weight:bold;
+  display: inline-block;
+  margin:0 0 0 5px;
 }
 
 .timetable {
@@ -368,6 +376,10 @@ h6 {
   width:75px;
   display:inline-block;
   margin-left:10px !important;
+}
+
+.txt {
+  visibility:hidden;
 }
 
 /***** FOOTER *****/
