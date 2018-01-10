@@ -13,8 +13,7 @@ var gulp = require('gulp'),
   replace = require('gulp-replace'),
   uglify = require('gulp-uglify'),
   htmlreplace = require('gulp-html-replace'),
-  webserver = require('gulp-webserver'),
-  rewriteImagePath = require('gulp-rewrite-image-path');
+  webserver = require('gulp-webserver');
 
 // Config
 var requireJsRuntimeConfig = vm.runInNewContext(fs.readFileSync('src/app/require.config.js') + '; require;');
@@ -79,10 +78,6 @@ gulp.task('fonts', function() {
 //     .pipe(rewriteImagePath({path:"./images"}))
 // });
 
-gulp.task('changepath', function() {
-  gulp.src('./src/pages/shop/shop.html')
-    .pipe(replace('../../../src/images', 'images'));
-});
 
 // Copies index.html, replacing <script> and <link> tags to reference production URLs
 gulp.task('html', function() {
