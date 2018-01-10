@@ -31,7 +31,8 @@ requireJsOptimizerConfig = merge(requireJsRuntimeConfig, {
     'pages/team/team',
     'pages/shop/shop',
     'pages/home/home',
-    'pages/event/event'
+    'pages/event/event',
+    'pages/approval/approval'
   ],
   insertRequire: ['app/startup'],
   bundles: {
@@ -72,11 +73,6 @@ gulp.task('fonts', function() {
     })
     .pipe(gulp.dest('./dist/fonts'));
 });
-
-// gulp.task('changepath', function () {
-//   gulp.src('./src/pages/shop/shop.html')
-//     .pipe(rewriteImagePath({path:"./images"}))
-// });
 
 
 // Copies index.html, replacing <script> and <link> tags to reference production URLs
