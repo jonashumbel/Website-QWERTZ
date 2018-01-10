@@ -29,7 +29,7 @@ b {
 
 h5 {
   font-size: 2em;
-  margin: 0 0 20px 0;
+  margin: 20px 0 20px 0;
 }
 
 .divider {
@@ -442,6 +442,20 @@ h6 {
   padding-top: 0px;
 }
 
+.promButton {
+  background-color: #EDDDB1;
+}
+
+.promButton:hover {
+  color: #EDDDB1 !important;
+}
+
+.helpMessage {
+  font-weight: 200;
+  font-size: 1em;
+  margin-top: 50px;
+}
+
 /***** FOOTER *****/
 
 footer {
@@ -637,6 +651,21 @@ sieht also auch auf grossen Bildschirmen gut aus. */
   }
   .productContainer {
     padding: 5px;
+  }
+  /***** EVENT *****/
+  .eventPromoter>h1 {
+    font-size: 1.5em;
+  }
+  #closePromoter {
+    font-size: 1.4em;
+    margin-top: 2px;
+  }
+  .eventPromoter {
+    height: 120px;
+  }
+  .promoterCircle {
+    top: -10px;
+    left: -250px;
   }
   /***** FOOTER *****/
   footer {

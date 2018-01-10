@@ -19,6 +19,10 @@
     <h6>Kosten?</h6>
     <p>Nope. Du bist gratis dabei. Wenn du willst kannst du uns aber gerne vor Ort noch finanziell unterstützen.</p>
   </div>
+  <h5>Teaser</h5>
+  <video width='100%' controls>
+    <source src="../../../src/videos/eventTeaser.mp4" type='video/mp4'>
+    </video>
   <h5>Programm</h5>
   <div class='timetable'>
     <h6>15:00 </h6><p class='programmPoint'>// Apéro | Ping Pong Turnier </p>
@@ -51,6 +55,60 @@
         <input type='radio' name='registerChoice' id='radio-2' value='no' data-bind='checked: registerChoice' />
         <label for='radio-2'>Ich/wir können leider nicht dabei sein</label>
       </div>
+      <!-- ko if: registerChoice() == 'no' -->
+      <div class='fieldContainer'>
+        <input type="text" required="required" placeholder="Vorname" class="inputField" name="surname" />
+        <input type="text" required="required" placeholder="Nachname" class="inputField" name="name" />
+      </div>
+      <div class='fieldContainer'>
+        <input type="email" required="required" placeholder="Email" class="inputField" name="email" />
+      </div>
+      <div class='fieldContainer'>
+        <input type='checkbox' data-bind='checked: addPerson' id='checkbox-1' />
+        <label for='checkbox-1'>Ich möchte noch eine weitere Person abmelden:</label>
+      </div>
+      <!-- ko if: addPerson() == true -->
+      <div class='fieldContainer'>
+        <input type="text" required="required" placeholder="Vorname Beigleitperson" class="inputField" name="surname" />
+        <input type="text" required="required" placeholder="Nachname Beigleitperson" class="inputField" name="name" />
+      </div>
+      <div class='fieldContainer'>
+        <input type="email" required="required" placeholder="Email" class="inputField" name="email" />
+      </div>
+      <!-- /ko -->
+      <div class='fieldContainer'>
+        <p>Ich möchte / wir möchten das Projekt dennoch mit folgendem Betrag unterstützen:</p>
+      </div>
+      <div class='fieldContainer'>
+        <div class="valueChoice">
+          <input type='radio' id='radio-5' required="required" name='value' data-bind='checked: ownValue' value='number'>
+          <label for='radio-5'>CHF 200</label>
+        </div>
+        <div class="valueChoice">
+          <input type='radio' id='radio-6' required="required" name='value' data-bind='checked: ownValue' value='number'>
+          <label for='radio-6'>CHF 300</label>
+        </div>
+        <div class="valueChoice">
+          <input type='radio' id='radio-7' required="required" name='value' data-bind='checked: ownValue' value='number'>
+          <label for='radio-7'>CHF 500</label>
+        </div>
+
+        <div class="valueChoice">
+          <input type='radio' id='radio-8' required="required" name='value' value='own' data-bind='checked: ownValue'>
+          <label for='radio-8'>Eigener Betrag</label>
+          <!-- ko if: ownValue() == 'own'-->
+          <input type='number' value='' class='inputField number'>
+          <!-- /ko -->
+        </div>
+      </div>
+      <div class='fieldContainer'>
+        <div class='valueChoice'>
+        <input type='radio' id='radio-9' required="required" name='value' value='nothing' data-bind='checked: ownValue'>
+        <label for='radio-9'>Ich verzichte auf die Unterstützung des Projekts.</label>
+      </div>
+      </div>
+      <a href='#approval'><input type='submit' class='button' value="Los geht's"></a>
+      <!-- /ko -->
       <!-- ko if: registerChoice() == 'yes' -->
       <div class='fieldContainer'>
         <input type="text" required="required" placeholder="Vorname" class="inputField" name="surname" />
@@ -116,8 +174,9 @@
         <label for='radio-9'>Ich verzichte auf die Unterstützung des Projekts.</label>
       </div>
       </div>
-      <input type='submit' class='button' href='#approval' value="Los geht's">
+      <a href='#approval'><input type='submit' class='button' value="Los geht's"></a>
       <!-- /ko -->
+      <p class='helpMessage'>Bei Fragen stehen wir Ihnen gerne zur Verfügung. Melden Sie sich unter info@qwertz.ch oder direkt über das <a href='#kontakt'>Kontaktformular.</a></p>
 
 
     </form>
