@@ -111,7 +111,7 @@ gulp.task('clean', function() {
     .pipe(clean());
 });
 
-gulp.task('default', ['changepath', 'html', 'js', 'css', 'img', 'video', 'fonts'], function(callback) {
+gulp.task('default', ['html', 'js', 'css', 'img', 'video', 'fonts'], function(callback) {
   callback();
   console.log('\nPlaced optimized files in ' + chalk.magenta('dist/\n'));
 });
