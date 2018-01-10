@@ -46,7 +46,7 @@
   </div>
   <h5>Anmeldeformular</h5>
   <div class='formContainer'>
-    <form id='registerForm'>
+    <form id='registerForm' action='#approval'>
       <div class='fieldContainer '>
         <input type='radio' name='registerChoice' id='radio-1' value='yes' data-bind='checked: registerChoice' />
         <label for='radio-1'>Ja ich möchte mich/uns anmelden</label>
@@ -107,7 +107,7 @@
         <label for='radio-9'>Ich verzichte auf die Unterstützung des Projekts.</label>
       </div>
       </div>
-      <a href='#approval'><input type='submit' class='button' value="Los geht's"></a>
+      <a href='#approval'><input type='submit' class='button' value="Los geht's" action="#approval"></a>
       <!-- /ko -->
       <!-- ko if: registerChoice() == 'yes' -->
       <div class='fieldContainer'>
